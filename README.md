@@ -29,15 +29,12 @@
 
 ## 安装
 
-1. 你需要 Go 的开发环境 [Go](https://golang.org/) ，然后您可以使用以下 Go 命令安装抢课工具
-```sh
-$ go get -u github.com/LgoLgo/cqupt-grabber
-```
+1. 你需要 Go 1.18 的开发环境 [Go](https://golang.org/) ，然后将本仓库代码下载到/Go/src/目录下
 
 2. 在你的代码中 import
 
 ```go
-import "github.com/LgoLgo/cqupt-grabber"
+import "cqupt-grabber"
 ```
 
 ## 快速开始
@@ -45,7 +42,7 @@ import "github.com/LgoLgo/cqupt-grabber"
 ```go
 package main
 
-import "github.com/LgoLgo/cqupt-grabber/cqupt"
+import "cqupt"
 
 func main() {
   tool := cqupt.New()
