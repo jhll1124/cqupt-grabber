@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/LgoLgo/cqupt-grabber/cqupt"
+	"cqupt"
 )
 
 func main() {

@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/LgoLgo/cqupt-grabber/model"
+	"model"
 )
 
 type Queryer struct{}
@@ -50,8 +50,8 @@ func (q *Queryer) AllRenWen(cookie string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	var builder strings.Builder
 	for _, item := range classInfo.Data {
+		var builder strings.Builder
 		SRsLimit := strconv.Itoa(item.RsLimit)
 		SRwType := strconv.Itoa(item.RwType)
 
@@ -64,12 +64,11 @@ func (q *Queryer) AllRenWen(cookie string) {
 		for _, str := range strs {
 			builder.WriteString(str)
 		}
-		builder.WriteString("\n")
-	}
-	loads := builder.String()
-	err = ioutil.WriteFile("./output_renwen.txt", []byte(loads), 0o666) // 写入文件(字节数组)
-	if err != nil {
-		log.Fatal(err.Error())
+		loads := builder.String()
+		err = ioutil.WriteFile("./output_renwen.txt", []byte(loads), 0o666) // 写入文件(字节数组)
+		if err != nil {
+			log.Fatal(err.Error())
+		}
 	}
 	return
 }
@@ -81,8 +80,8 @@ func (q *Queryer) AllZiRan(cookie string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	var builder strings.Builder
 	for _, item := range classInfo.Data {
+		var builder strings.Builder
 		SRsLimit := strconv.Itoa(item.RsLimit)
 		SRwType := strconv.Itoa(item.RwType)
 
@@ -95,12 +94,11 @@ func (q *Queryer) AllZiRan(cookie string) {
 		for _, str := range strs {
 			builder.WriteString(str)
 		}
-		builder.WriteString("\n")
-	}
-	loads := builder.String()
-	err = ioutil.WriteFile("./output_ziran.txt", []byte(loads), 0o666) // 写入文件(字节数组)
-	if err != nil {
-		log.Fatal(err.Error())
+		loads := builder.String()
+		err = ioutil.WriteFile("./output_ziran.txt", []byte(loads), 0o666) // 写入文件(字节数组)
+		if err != nil {
+			log.Fatal(err.Error())
+		}
 	}
 	return
 }

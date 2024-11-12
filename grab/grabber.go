@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/LgoLgo/cqupt-grabber/model"
+	"model"
 )
 
 type Grabber struct {
