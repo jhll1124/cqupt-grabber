@@ -29,13 +29,8 @@
 
 ## 安装
 
-1. 你需要 Go 1.18 的开发环境 [Go](https://golang.org/) ，然后将本仓库代码下载到/Go/src/目录下
+你需要 Go 1.18 的开发环境 [Go](https://golang.org/) ，然后将拉取本仓库文件夹cqupt, grab, model, query到/Go/src/目录下
 
-2. 在你的代码中 import
-
-```go
-import "cqupt-grabber"
-```
 
 ## 快速开始
 使用包中的 LoopRob ， 0.25s 进行一次抢课，直到有一门课被抢到
